@@ -1,0 +1,102 @@
+body{
+    background-color: #292929;
+}
+#title{
+display: flex;
+justify-content: space-between;
+
+}
+#chart{
+  display: flex;
+  align-items: center;
+  
+}
+#svg1,#svg2,#svg3,#svg4,#svg12s,#svg114s,#svg130s,#svg214s,#svg227s,#svg311s,#svg324s, #svg419s, #svg408s, #svg505s,#svg518s
+,#svg602s, #svg615s, #svg629s, #svg713s, #svg726s, #svg811s, #svg823s, #svg908s, #svg919s,#svg1017s,  #svg1028s, #svg1113s, 
+#svg1126s, #svg1212s, #svg1224s{
+    position: absolute;
+      top: 0;
+      left: 0;
+      width: 180%;
+      height: 120%;
+}
+
+#svg12,#svg114,#svg130,#svg214,#svg227,#svg311,#svg324, #svg419, #svg408, #svg505,#svg518
+,#svg602, #svg615, #svg629, #svg713, #svg726, #svg811, #svg823, #svg908, #svg919,#svg1017, #svg1028,#svg1113, 
+#svg1126, #svg1212, #svg1224{
+  position: absolute;
+        top: 0;
+        left: 0;
+    width: 300px;
+    height: 300px;
+z-index: 2;
+}
+
+
+
+.chart-container {
+    position: relative;
+    width: 750px;
+    height: 600px;
+margin-left: 100px;
+  }
+ 
+  
+  object {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    
+  }
+  button {
+    margin: 5px;
+    padding: 8px 10px;
+    text-transform: uppercase;
+    border-radius: 12px;
+    font-size: 10px;
+    font-weight: 400;
+    color: #ffffff80;
+    text-shadow: none;
+    background: transparent;
+    box-shadow: transparent;
+    border: 1px solid #ffffff80;
+    transition: 0.5s ease;
+    user-select: none;
+    font-family:'apercu';
+   
+  }
+  
+  #btn:hover,:focus {
+    color: #ffffff;
+    background: #008cff;
+    border: 1px solid #008cff;
+    text-shadow: 0 0 5px #ffffff,
+                0 0 8px #ffffff,
+                0 0 20px #ffffff;
+    box-shadow: 0 0 3px #008cff,
+                0 0 10px #008cff,
+                0 0 20px #008cff,
+                0 0 30px #008cff;
+                
+  }
+ .buttonrow{
+  display: flex;
+ }
+ p{
+  color: #ffffff;
+  font-size: 10px;
+  font-family:'apercu';
+ }
+ h1{
+  font-family:'apercu';
+  font-size: 28px;
+  color: #ffffff;
+  text-align: right;
+ }
+ h2{
+  font-family:'apercu';
+  font-size: 20px;
+  color: #ffffff;
+ }

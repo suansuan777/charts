@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Interactive Circle Chart</title>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.2/dist/echarts.min.js"></script>
+  <link rel="stylesheet" href="./数据可视化.css" type="text/css">
+  <link rel="stylesheet" href="./fonttrial.css " type="text/css">
+
+</head>
+<body>
+  <div id="title">
+  <div class="one"> 
+    <button id="btn1" onclick="toggleSVG('svg1')">365 DAY TIDE TABLE</button>
+    <button id="btn2" onclick="toggleSVG('svg2')">EARTH MOON DISTANCE</button>
+    <button id="btn3" onclick="toggleSVG('svg3')">TIDAL TYPE</button>
+    <button id="btn4" onclick="toggleSVG('svg4')">MONTH</button>
+    <button id="btn5" onclick="moon()">PHASE OF THE MOON</button>
+  </div>
+  <div>
+    <h1>
+    TIDALDATA 365DAYS </h1>
+  </div>
+</div>
+ <div id="chart">
+  <div class="chart-button">
+  <h2>SPECIAL DAYS</h2>
+ <div class="buttonrow">
+  
+  <button id="btn6" onclick="toggleSVG('svg12')">2022/01/02</button>
+  <button id="btn6" onclick="toggleSVG('svg114')">2022/01/14</button>
+  <button id="btn6" onclick="toggleSVG('svg130')">2022/01/30</button>
+</div>
+<div class="buttonrow">
+ 
+ 
+  <button id="btn6" onclick="toggleSVG('svg214')">2022/02/14</button>
+  <button id="btn6" onclick="toggleSVG('svg227')">2022/02/27</button>
+</div>
+<div class="buttonrow">
+ 
+ 
+  <button id="btn6" onclick="toggleSVG('svg311')">2022/03/11</button>
+  <button id="btn6" onclick="toggleSVG('svg324')">2022/03/24</button>
+  
+
+</div>
+<div class="buttonrow">
+ 
+ 
+  <button id="btn6" onclick="toggleSVG('svg408')">2022/04/08</button>
+  <button id="btn6" onclick="toggleSVG('svg419')">2022/04/19</button>
+  
+
+</div>
+<div class="buttonrow">
+ 
+ 
+  <button id="btn6" onclick="toggleSVG('svg505')">2022/05/05</button>
+  <button id="btn6" onclick="toggleSVG('svg518')">2022/05/18</button>
+  
+
+</div>
+<div class="buttonrow">
+  
+  <button id="btn6" onclick="toggleSVG('svg602')">2022/06/02</button>
+  <button id="btn6" onclick="toggleSVG('svg615')">2022/06/15</button>
+  <button id="btn6" onclick="toggleSVG('svg629')">2022/06/29</button>
+  
+  
+
+</div>
+<div class="buttonrow">
+ 
+ 
+  <button id="btn6" onclick="toggleSVG('svg713')">2022/07/13</button>
+  <button id="btn6" onclick="toggleSVG('svg726')">2022/07/26</button>
+  
+
+</div>
+<div class="buttonrow">
+  
+ 
+  <button id="btn6" onclick="toggleSVG('svg811')">2022/08/11</button>
+  <button id="btn6" onclick="toggleSVG('svg823')">2022/08/23</button>
+  
+
+</div>
+<div class="buttonrow">
+
+ 
+  <button id="btn6" onclick="toggleSVG('svg908')">2022/09/08</button>
+  <button id="btn6" onclick="toggleSVG('svg919')">2022/09/19</button>
+  
+
+</div>
+<div class="buttonrow">
+
+ 
+  <button id="btn6" onclick="toggleSVG('svg1017')">2022/10/17</button>
+  <button id="btn6" onclick="toggleSVG('svg1028')">2022/10/28</button>
+  
+
+</div>
+<div class="buttonrow">
+
+ 
+  <button id="btn6" onclick="toggleSVG('svg1113')">2022/11/13</button>
+  <button id="btn6" onclick="toggleSVG('svg1126')">2022/11/26</button>
+  
+
+</div>
+<div class="buttonrow">
+
+  <button id="btn6" onclick="toggleSVG('svg1212')">2022/12/12</button>
+  <button id="btn6" onclick="toggleSVG('svg1224')">2022/12/24</button>
+  
+</div>
+</div>
+ 
+
+  <div class="chart-container">
+    <object id="svg1" data="./assets/大图.svg" type="image/svg+xml"></object>
+    
+    <object id="svg2" data="./assets/地月距离.svg" type="image/svg+xml"></object>
+ 
+    <object id="svg3" data="./assets/大小潮.svg" type="image/svg+xml"></object>
+    <object id="svg4" data="./assets/最外圈.svg" type="image/svg+xml"></object>
+    <object id="svg12s" data="./assets/1.2.svg" type="image/svg+xml"></object>
+    <object id="svg12" data="./潮汐图表HTML文件/1.2.html" type="image/svg+xml"></object>
+    <object id="svg114s" data="./assets/1.14.svg" type="image/svg+xml"></object>
+    <object id="svg114" data="./潮汐图表HTML文件/1.14.html" type="image/svg+xml"></object>
+    <object id="svg130s" data="./assets/1.30.svg" type="image/svg+xml"></object>
+    <object id="svg130" data="./潮汐图表HTML文件/1.30.html" type="image/svg+xml"></object>
+    <object id="svg214s" data="./assets/2.14.svg" type="image/svg+xml"></object>
+    <object id="svg214" data="./潮汐图表HTML文件/2.14.html" type="image/svg+xml"></object>
+    <object id="svg227s" data="./assets/2.27.svg" type="image/svg+xml"></object>
+    <object id="svg227" data="./潮汐图表HTML文件/2.27.html" type="image/svg+xml"></object>
+    <object id="svg311s" data="./assets/3.11.svg" type="image/svg+xml"></object>
+    <object id="svg311" data="./潮汐图表HTML文件/3.11.html" type="image/svg+xml"></object>
+    <object id="svg324s" data="./assets/3.24.svg" type="image/svg+xml"></object>
+    <object id="svg324" data="./潮汐图表HTML文件/3.24.html" type="image/svg+xml"></object>
+    <object id="svg419s" data="./assets/4.19.svg" type="image/svg+xml"></object>
+    <object id="svg419" data="./潮汐图表HTML文件/4.19.html" type="image/svg+xml"></object>
+    <object id="svg408s" data="./assets/4.8.svg" type="image/svg+xml"></object>
+    <object id="svg408" data="./潮汐图表HTML文件/4.8.html" type="image/svg+xml"></object>
+    <object id="svg505s" data="./assets/5.5.svg" type="image/svg+xml"></object>
+    <object id="svg505" data="./潮汐图表HTML文件/5.5.html" type="image/svg+xml"></object>
+    <object id="svg518s" data="./assets/5.18.svg" type="image/svg+xml"></object>
+    <object id="svg518" data="./潮汐图表HTML文件/5.18.html" type="image/svg+xml"></object>
+    <object id="svg602s" data="./assets/6.2.svg" type="image/svg+xml"></object>
+    <object id="svg602" data="./潮汐图表HTML文件/6.2.html" type="image/svg+xml"></object>
+    <object id="svg615s" data="./assets/6.15.svg" type="image/svg+xml"></object>
+    <object id="svg615" data="./潮汐图表HTML文件/6.15.html" type="image/svg+xml"></object>
+    <object id="svg629s" data="./assets/6.29.svg" type="image/svg+xml"></object>
+    <object id="svg629" data="./潮汐图表HTML文件/6.29.html" type="image/svg+xml"></object>
+    <object id="svg713s" data="./assets/7.13.svg" type="image/svg+xml"></object>
+    <object id="svg713" data="./潮汐图表HTML文件/7.13.html" type="image/svg+xml"></object>
+    <object id="svg726s" data="./assets/7.26.svg" type="image/svg+xml"></object>
+    <object id="svg726" data="./潮汐图表HTML文件/7.26.html" type="image/svg+xml"></object>
+    <object id="svg811s" data="./assets/8.11.svg" type="image/svg+xml"></object>
+    <object id="svg811" data="./潮汐图表HTML文件/8.11.html" type="image/svg+xml"></object>
+    <object id="svg823s" data="./assets/8.23.svg" type="image/svg+xml"></object>
+    <object id="svg823" data="./潮汐图表HTML文件/8.23.html" type="image/svg+xml"></object>
+    <object id="svg908s" data="./assets/9.8.svg" type="image/svg+xml"></object>
+    <object id="svg908" data="./潮汐图表HTML文件/9.8.html" type="image/svg+xml"></object>
+    <object id="svg919s" data="./assets/9.19.svg" type="image/svg+xml"></object>
+    <object id="svg919" data="./潮汐图表HTML文件/9.19.html" type="image/svg+xml"></object>
+    <object id="svg1017s" data="./assets/10.17.svg" type="image/svg+xml"></object>
+    <object id="svg1017" data="./潮汐图表HTML文件/10.17.html" type="image/svg+xml"></object>
+    <object id="svg1028s" data="./assets/10.28.svg" type="image/svg+xml"></object>
+    <object id="svg1028" data="./潮汐图表HTML文件/10.28.html" type="image/svg+xml"></object>
+    <object id="svg1113s" data="./assets/11.13.svg" type="image/svg+xml"></object>
+    <object id="svg1113" data="./潮汐图表HTML文件/11.13.html" type="image/svg+xml"></object>
+    <object id="svg1126s" data="./assets/11.26.svg" type="image/svg+xml"></object>
+    <object id="svg1126" data="./潮汐图表HTML文件/11.26.html" type="image/svg+xml"></object>
+    <object id="svg1212s" data="./assets/12.12.svg" type="image/svg+xml"></object>
+    <object id="svg1212" data="./潮汐图表HTML文件/12.12.html" type="image/svg+xml"></object>
+    <object id="svg1224s" data="./assets/12.24.svg" type="image/svg+xml"></object>
+    <object id="svg1224" data="./潮汐图表HTML文件/12.24.html" type="image/svg+xml"></object>
+   
+
+  
+  </div>
+</div>
+
+  <script>
+      var increment = 100;
+  function toggleSVG(svgId) {
+    var svg = document.getElementById(svgId);
+    if(svg.style.opacity === '') {
+      svg.style.opacity = '1';
+    }
+    else {
+     svg.style.opacity = (svg.style.opacity === '0') ? '1' : '0';
+    }
+    svg.style.zIndex = increment.toString();
+    increment += 1;
+  }
+
+  function moon() {
+    var idList = ['svg12s', 'svg114s', 'svg130s', 'svg214s', 'svg227s','svg311s', 'svg324s', 'svg419s', 'svg408s', 'svg505s','svg518s'
+   ,'svg602s', 'svg615s', 'svg629s', 'svg713s', 'svg726s', 'svg811s', 'svg823s', 'svg908s', 'svg919s','svg1017s',  'svg1028s', 'svg1113s', 
+   'svg1126s', 'svg1212s', 'svg1224s'
+    ];
+    for (let i = 0; i < idList.length; i++) {
+      toggleSVG(idList[i]);
+    }
+  }
+  
+    </script>
+</body>
+</html>
+
+    
+
+
+
+
+  

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+ 
+</head>
+<link rel="stylesheet" href="./fonttrial.css " type="text/css">
+<body style="height: 100%; margin: 0 ;background-color:#282828;" >
+  <div id="container" style="height: 100%"></div>
+
+  
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.2/dist/echarts.min.js"></script>
+
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    
+    var option;
+    
+ 
+    var option={
+    backgroundColor:'rgba(128, 128, 128, 0.1)' //rgba设置透明度0.1
+}
+
+    option = {
+      title: {
+        left:'center',
+    text: '2022/11/13  Tidal Variation Chart',
+    textStyle:{
+        //文字颜色
+        color:'#ccc',
+        //字体风格,'normal','italic','oblique'
+        fontStyle:'normal',
+        //字体粗细 'normal','bold','bolder','lighter',100 | 200 | 300 | 400...
+        fontWeight:'bold',
+        //字体系列
+        fontFamily:'apercu',
+        
+             
+        
+　　　　 
+    }
+
+},
+      
+      tooltip: {
+              trigger: 'axis', //坐标轴触发，主要在柱状图，折线图等会使用类目轴的图表中使用
+              axisPointer: {// 坐标轴指示器，坐标轴触发有效
+                type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
+              }
+            },
+  xAxis: {
+    type: 'category',
+    boundaryGap: false,
+    data: ['00：00', '02：00', '04：00', '06：00', '08：00', '10：00', '12:00','14：00', '16：00', '18：00', '20：00', 
+    '22：00', '23：59']
+  },
+  yAxis: {
+    type: 'value',
+    splitLine: {show: false},
+    
+  },
+  series: [
+    {
+      boundaryGap: false,
+      data: [282,585,653,459,217,102,310,664,776,584,321,168,155],
+      type: 'line',
+    
+            smooth: true,
+      
+      
+      areaStyle: {
+                color: {
+                  type: 'linear',
+                  x: 0,
+                  y: 0,
+                  x2: 0,
+                  y2: 1,
+                  colorStops: [  // 渐变颜色
+                    {
+                      offset: 0,
+                      color:'#347ACE',
+                    },
+                    {
+                      offset: 1,
+                      color:'#282828',
+                    },
+                  ],
+                  global: false,
+                },},
+      
+    }
+  ]
+};
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+</body>
+</html>
